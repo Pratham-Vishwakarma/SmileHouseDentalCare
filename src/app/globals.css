@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -12,7 +12,7 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   color: var(--foreground);
@@ -25,23 +25,23 @@ body {
   height: 100%;
 }
 
-.navbar {
-  background-color: #000; /* Black background to blend with theme */
-  position: fixed; /* Fixes navbar to the top */
-  z-index: 50; /* Ensures it stays above other content */
-  width: 100%; /* Full width */
-  padding: 10px 20px; /* Adjust spacing as needed */
-}
+/* .navbar {
+  background-color: #000;
+  position: fixed;
+  z-index: 50;
+  width: 100%;
+  padding: 10px 20px;
+} */
 
-.main-content {
-  padding-top: 60px; /* Adjust based on navbar height */
-}
+/* .main-content {
+  padding-top: 60px;
+} */
 
 /* Reset margins for HTML and body */
-body, html {
+/* body, html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-}
+} */

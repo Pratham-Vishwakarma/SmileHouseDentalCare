@@ -35,11 +35,6 @@ export default function RootLayout({ children }) {
       <body className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} bg-white text-gray-900`}>
         {/* Main content */}
         {children}
-
-        {/* Example usage of the mono font in a code block */}
-        <pre className={`${geistMono.variable} bg-gray-800 text-white p-4`}>
-          {/* Your code block */}
-        </pre>
       </body>
     </html>
   );

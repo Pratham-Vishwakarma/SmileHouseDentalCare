@@ -6,7 +6,7 @@ const page = () => {
   return (
     <>
       <Navbar/>
-      <div className="bg-black py-12 sm:py-16 lg:py-24">
+      <div className="bg-gradient-to-b from-stone-600 via-slate-600 to-zinc-600 py-24 sm:py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-extrabold text-white sm:text-4xl">

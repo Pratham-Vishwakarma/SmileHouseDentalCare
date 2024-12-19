@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { format } from "date-fns";
+import Navbar from "../components/Navbar";
 
 export default function Page() {
   const [selectedDate, setSelectedDate] = useState("");
@@ -60,71 +61,74 @@ export default function Page() {
   };
 
   return (
-    <div className="bg-gray-100 min-h-screen flex items-center justify-center p-6">
-      <div className="bg-white rounded-lg shadow-lg w-full max-w-md p-6">
-        <h2 className="text-2xl font-bold text-center text-gray-800 mb-4">
-          Book an Appointment
-        </h2>
-        <form onSubmit={handleSubmit}>
-          <div className="mb-4">
-            <label
-              htmlFor="date"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Select Date
-            </label>
-            <input
-              type="date"
-              id="date"
-              name="date"
-              value={selectedDate}
-              onChange={(e) => setSelectedDate(e.target.value)}
-              required
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-            />
-          </div>
-
-          <div className="mb-4">
-            <label
-              htmlFor="time-slot"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Available Time Slots
-            </label>
-            <div className="grid grid-cols-2 gap-2 mt-2">
-              {timeSlots.map((slot, index) => (
-                <button
-                  key={index}
-                  type="button"
-                  onClick={() => setSelectedTimeSlot(slot)}
-                  className={`py-2 px-3 rounded-md text-sm font-medium ${
-                    selectedTimeSlot === slot
-                      ? "bg-indigo-600 text-white"
-                      : "bg-gray-200 text-gray-800 hover:bg-indigo-500 hover:text-white"
-                  }`}
-                >
-                  {slot}
-                </button>
-              ))}
+    <>
+      <Navbar/>
+      <div className="bg-gradient-to-b from-stone-600 via-slate-600 to-zinc-600 min-h-screen flex items-center justify-center p-6">
+        <div className="bg-gradient-to-b from-zinc-500 via-slate-500 to-stone-500 rounded-lg drop-shadow-2xl w-full max-w-md p-6">
+          <h2 className="text-2xl font-bold text-center text-gray-100 mb-4">
+            Book an Appointment
+          </h2>
+          <form onSubmit={handleSubmit}>
+            <div className="mb-4">
+              <label
+                htmlFor="date"
+                className="block text-sm font-medium text-gray-300"
+              >
+                Select Date
+              </label>
+              <input
+                type="date"
+                id="date"
+                name="date"
+                value={selectedDate}
+                onChange={(e) => setSelectedDate(e.target.value)}
+                required
+                className="mt-1 block w-full rounded-md border-gray-800 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+              />
             </div>
-          </div>
 
-          <button
-            type="submit"
-            disabled={isSubmitting}
-            className={`w-full rounded-md py-2 px-4 text-white ${
-              isSubmitting ? "bg-gray-400" : "bg-indigo-600 hover:bg-indigo-700"
-            }`}
-          >
-            {isSubmitting ? "Booking..." : "Confirm Appointment"}
-          </button>
-        </form>
-        {successMessage && (
-          <p className="mt-4 text-green-500 text-sm text-center">
-            {successMessage}
-          </p>
-        )}
+            <div className="mb-4">
+              <label
+                htmlFor="time-slot"
+                className="block text-sm font-medium text-gray-300"
+              >
+                Available Time Slots
+              </label>
+              <div className="grid grid-cols-2 gap-2 mt-2">
+                {timeSlots.map((slot, index) => (
+                  <button
+                    key={index}
+                    type="button"
+                    onClick={() => setSelectedTimeSlot(slot)}
+                    className={`py-2 px-3 rounded-md text-sm font-medium ${
+                      selectedTimeSlot === slot
+                        ? "bg-indigo-500 text-white"
+                        : "bg-slate-800 text-gray-300 hover:bg-indigo-500 hover:text-white"
+                    }`}
+                  >
+                    {slot}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className={`w-full rounded-md py-2 px-4 text-white ${
+                isSubmitting ? "bg-gray-400" : "bg-indigo-600 hover:bg-indigo-700"
+              }`}
+            >
+              {isSubmitting ? "Booking..." : "Confirm Appointment"}
+            </button>
+          </form>
+          {successMessage && (
+            <p className="mt-4 text-green-300 text-sm text-center">
+              {successMessage}
+            </p>
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 }

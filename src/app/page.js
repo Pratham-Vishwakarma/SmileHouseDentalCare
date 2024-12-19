@@ -3,25 +3,24 @@ import Image from 'next/image';
 
 export default function Home() {
   return (
+    <>
+    <Navbar />
     <div className="bg-black text-white min-h-screen">
-      {/* Navbar */}
-      <Navbar />
-
       {/* Home Page Content */}
       <div className="relative bg-black overflow-hidden">
         {/* Background Image */}
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-center rotate-180"
           style={{
             backgroundImage: "url('https://wallpaperaccess.com/full/4219039.jpg')",
           }}
         ></div>
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black opacity-70"></div>
+        <div className="absolute inset-0 bg-gradient-to-tl from-zinc-600 from-10% via-slate-600 via-60% to-stone-600 to-90% opacity-50"></div>
 
         {/* Content */}
-        <div className="relative z-10 px-6 py-16 sm:py-24 lg:py-32 text-center text-white">
+        <div className="relative z-10 px-6 py-24 sm:py-24 lg:py-32 text-center text-white">
           <h1 className="text-4xl font-extrabold sm:text-5xl">
             Welcome to Our Dental Clinic
           </h1>
@@ -32,7 +31,7 @@ export default function Home() {
       </div>
 
       {/* Testimonials Section */}
-      <div className="bg-gray-900 py-16">
+      <div className="bg-gradient-to-tr from-stone-600 from-10% via-slate-600 via-40% to-zinc-600 to-90% py-12">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-extrabold sm:text-4xl">
             What Our Patients Are Saying
@@ -40,27 +39,27 @@ export default function Home() {
           <div className="mt-12 space-y-8">
             {/* Testimonial 1 */}
             <div className="flex flex-col items-center">
-              <p className="text-lg text-gray-300">
+              <p className="text-lg text-gray-100">
                 {`"The dental care I received was outstanding! The staff was friendly, and the treatment was quick and painless."`}
               </p>
               <h4 className="mt-4 text-xl font-semibold">John Doe</h4>
-              <p className="mt-1 text-gray-400">Satisfied Patient</p>
+              <p className="mt-1 text-gray-100">Satisfied Patient</p>
             </div>
 
             {/* Testimonial 2 */}
             <div className="flex flex-col items-center">
-              <p className="text-lg text-gray-300">
+              <p className="text-lg text-gray-100">
                 {`"I love my new smile! The clinic’s team made sure I was comfortable throughout the procedure. Highly recommend!"`}
               </p>
               <h4 className="mt-4 text-xl font-semibold">Jane Smith</h4>
-              <p className="mt-1 text-gray-400">Happy Customer</p>
+              <p className="mt-1 text-gray-100">Happy Customer</p>
             </div>
           </div>
         </div>
       </div>
 
       {/* Before and After Gallery */}
-      <div className="bg-gray-800 py-16">
+      <div className="bg-gradient-to-tl from-zinc-600 from-10% via-slate-600 via-60% to-stone-600 to-90% py-8">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-extrabold sm:text-4xl">
             Before & After Gallery
@@ -96,7 +95,7 @@ export default function Home() {
       </div>
 
       {/* FAQ Section */}
-      <div className="bg-gray-900 py-16">
+      <div className="bg-gradient-to-tr from-stone-600 from-10% via-slate-600 via-40% to-zinc-600 to-90% py-12">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-extrabold sm:text-4xl">
             Frequently Asked Questions
@@ -129,5 +128,6 @@ export default function Home() {
         </div>
       </div>
     </div>
+    </>
   );
 }

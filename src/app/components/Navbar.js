@@ -10,10 +10,10 @@ export default function Navbar() {
   };
 
   return (
-    <>
-      <nav className="bg-black font-poppins fixed w-[95%] z-50 rounded-xl m-4 shadow-lg"> {/* Added margin, rounded edges, and shadow */}
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="relative flex h-16 items-center justify-between">
+    <div className="flex justify-center">
+      <nav className="bg-slate-900 font-poppins fixed w-[90%] z-50 rounded-3xl shadow-2xl mt-4 opacity-90">
+        <div className="px-4 sm:px-6 lg:px-8">
+          <div className="relative flex h-16 items-center justify-center sm:justify-between"> {/* Use justify-center for centering */}
             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
               {/* Mobile menu button */}
               <button
@@ -92,16 +92,14 @@ export default function Navbar() {
                   >
                     Contact
                   </a>
+                  <a
+                    href="/appointment"
+                    className="rounded-lg px-4 py-2 text-sm font-semibold text-gray-300 hover:bg-gray-700 hover:text-white"
+                  >
+                    Book An Appointment
+                  </a>
                 </div>
               </div>
-            </div>
-            <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-              <a
-                href="/appointment"
-                className="rounded-lg px-4 py-2 text-sm font-semibold text-gray-300 hover:bg-gray-700 hover:text-white"
-              >
-                Book An Appointment
-              </a>
             </div>
           </div>
         </div>
@@ -133,12 +131,12 @@ export default function Navbar() {
                 href="/appointment"
                 className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
               >
-                Contact
+                Book An Appointment
               </a>
             </div>
           </div>
         )}
       </nav>
-    </>
+    </div>
   );
 }
