@@ -97,7 +97,7 @@ export default function Navbar() {
             </div>
             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
               <a
-                href="#"
+                href="/appointment"
                 className="rounded-lg px-4 py-2 text-sm font-semibold text-gray-300 hover:bg-gray-700 hover:text-white"
               >
                 Book An Appointment
@@ -125,6 +125,12 @@ export default function Navbar() {
               </a>
               <a
                 href="/contact"
+                className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+              >
+                Contact
+              </a>
+              <a
+                href="/appointment"
                 className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
               >
                 Contact
