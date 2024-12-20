@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= templateTitle %></title>
+</head>
+<body style="margin: 0; padding: 0;">
+    <table style="width: 100%;">
+        <tr style="background-color: #0A224050; color: white; height: 70px;">
+            <th>
+                <span style="font-size: 1.6rem;">
+                    <%= emailTitle %>
+                </span><br>
+                <small>Email Sender System</small>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <p>Dear User,</p>
+                <p><%= firstname %> <%= lastname %> has sent you an email.</p>    
+                <p>This email was sent to <%= email %>
+                </p>
+            </td>
+        </tr>
+        <!--Footer Section-->
+        <tr style="background-color: #0A224050; color: white; height: 70px;">
+            <th>
+                $#169; <%= (new Date()).getFullYear() %> Email Sender System.
+            </th>
+        </tr>
+    </table>
+</body>
+</html>

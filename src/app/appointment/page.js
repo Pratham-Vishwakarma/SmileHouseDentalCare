@@ -34,7 +34,7 @@ export default function Page() {
     const appointment = { date: formattedDate, timeSlot: selectedTimeSlot };
 
     try {
-        const response = await fetch("/api/appointment", { // Use absolute path
+        const response = await fetch("../api/appointment", { // Use absolute path
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -63,7 +63,7 @@ export default function Page() {
   return (
     <>
       <Navbar/>
-      <div className="bg-gradient-to-b from-stone-600 via-slate-600 to-zinc-600 min-h-screen flex items-center justify-center p-6">
+      <div className="bg-gradient-to-tl to-stone-600 via-slate-600 from-zinc-600 flex items-center justify-center p-6">
         <div className="bg-gradient-to-b from-zinc-500 via-slate-500 to-stone-500 rounded-lg drop-shadow-2xl w-full max-w-md p-6">
           <h2 className="text-2xl font-bold text-center text-gray-100 mb-4">
             Book an Appointment

@@ -11,7 +11,7 @@ export default function Navbar() {
 
   return (
     <div className="flex justify-center">
-      <nav className="bg-slate-900 font-poppins fixed w-[90%] z-50 rounded-3xl shadow-2xl mt-4 opacity-90">
+      <nav className="bg-gradient-to-tl from-stone-700 via-slate-700 to-zinc-700 font-poppins fixed w-[90%] z-50 rounded-3xl shadow-2xl mt-4 opacity-90">
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="relative flex h-16 items-center justify-center sm:justify-between"> {/* Use justify-center for centering */}
             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -78,7 +78,7 @@ export default function Navbar() {
                     className="rounded-lg px-4 py-2 text-sm font-semibold text-gray-300 hover:bg-gray-700 hover:text-white"
                     aria-current="page"
                   >
-                    About
+                    About Clinic
                   </a>
                   <a
                     href="/services"
@@ -87,16 +87,16 @@ export default function Navbar() {
                     Services
                   </a>
                   <a
+                    href="/about-your-doctor"
+                    className="rounded-lg px-4 py-2 text-sm font-semibold text-gray-300 hover:bg-gray-700 hover:text-white"
+                  >
+                    About Your Doctor
+                  </a>
+                  <a
                     href="/contact"
                     className="rounded-lg px-4 py-2 text-sm font-semibold text-gray-300 hover:bg-gray-700 hover:text-white"
                   >
                     Contact
-                  </a>
-                  <a
-                    href="/appointment"
-                    className="rounded-lg px-4 py-2 text-sm font-semibold text-gray-300 hover:bg-gray-700 hover:text-white"
-                  >
-                    Book An Appointment
                   </a>
                 </div>
               </div>
@@ -113,7 +113,7 @@ export default function Navbar() {
                 className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                 aria-current="page"
               >
-                About
+                About Clinic
               </a>
               <a
                 href="/services"
@@ -122,16 +122,16 @@ export default function Navbar() {
                 Services
               </a>
               <a
+                href="/about-your-doctor"
+                className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+              >
+                About Your Doctor
+              </a>
+              <a
                 href="/contact"
                 className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
               >
                 Contact
-              </a>
-              <a
-                href="/appointment"
-                className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-              >
-                Book An Appointment
               </a>
             </div>
           </div>

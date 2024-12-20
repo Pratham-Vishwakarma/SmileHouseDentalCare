@@ -56,32 +56,6 @@ const page = () => {
                 <h4 className="mt-4 text-xl font-semibold text-white">Dr. John Doe</h4>
                 <p className="mt-1 text-gray-400">Lead Dentist</p>
               </div>
-
-              {/* Team Member 2 */}
-              <div className="flex flex-col items-center text-center">
-                <Image
-                  src="https://images.unsplash.com/photo-1734335225921-06e1b6d94ed0?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="Dentist 2"
-                  width={150}
-                  height={150}
-                  className="w-32 h-32 rounded-full object-cover"
-                />
-                <h4 className="mt-4 text-xl font-semibold text-white">Dr. Jane Smith</h4>
-                <p className="mt-1 text-gray-400">Orthodontist</p>
-              </div>
-
-              {/* Team Member 3 */}
-              <div className="flex flex-col items-center text-center">
-                <Image
-                  src="https://images.unsplash.com/photo-1734335225921-06e1b6d94ed0?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="Dentist 3"
-                  width={150}
-                  height={150}
-                  className="w-32 h-32 rounded-full object-cover"
-                />
-                <h4 className="mt-4 text-xl font-semibold text-white">Dr. Alice Brown</h4>
-                <p className="mt-1 text-gray-400">Periodontist</p>
-              </div>
             </div>
           </div>
         </div>

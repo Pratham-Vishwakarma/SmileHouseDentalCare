@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar'; // Import Navbar
 import Image from 'next/image';
+import Page from './appointment/page'; // Import Page
 
 export default function Home() {
   return (
@@ -128,6 +129,7 @@ export default function Home() {
         </div>
       </div>
     </div>
+    <Page/>
     </>
   );
 }
