@@ -35,7 +35,6 @@ const sendMail = async (to, subject, templateName, templateData) => {
             subject,
             html
         }
-
         const info = await transporter.sendMail(mailOptions);
 
         return {message: `Message succesfully sent to ${info.accepted[0]}`}

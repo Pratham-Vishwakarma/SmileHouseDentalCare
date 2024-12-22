@@ -1,87 +1,77 @@
 "use client";
 import Image from "next/image";
 import Navbar from "../components/Navbar";
+import Footer from '../components/Footer';
 
 export default function AboutYourDoctor() {
     return (
         <>
             <Navbar />
-            <div className="bg-gradient-to-b from-stone-600 via-slate-600 to-zinc-600 min-h-screen flex items-center justify-center p-6">
-                <div className="bg-gradient-to-b from-zinc-500 via-slate-500 to-stone-500 rounded-lg shadow-lg w-full max-w-4xl p-6 mt-20">
-                    <div className="flex flex-col md:flex-row items-center">
+            <div className="bg-gradient-to-b from-stone-700 via-slate-700 to-zinc-700 min-h-screen flex items-center justify-center py-8 px-6">
+                <div className="bg-gradient-to-b from-stone-600 via-slate-600 to-zinc-600 rounded-3xl drop-shadow-2xl w-full max-w-4xl p-8 mt-16">
+                    <div className="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8">
                         {/* Doctor's Image */}
-                        <div className="w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden drop-shadow-2xl">
-                        <Image
-                            src="https://images.unsplash.com/photo-1734335225921-06e1b6d94ed0?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" // Replace with actual image path
-                            alt="Doctor's Profile"
-                            width={150}
-                            height={150}
-                            className="w-32 h-32 rounded-full object-cover"
-                        />
+                        <div className="w-32 h-32 rounded-full overflow-hidden shadow-xl">
+                            <Image
+                                src="/default-image.jpeg"
+                                alt="Doctor's Profile"
+                                width={150}
+                                height={150}
+                                className="w-32 h-32 rounded-full object-cover"
+                            />
                         </div>
-            
+
                         {/* Doctor's Information */}
-                        <div className="md:ml-8 mt-4 md:mt-0">
-                        <h2 className="text-2xl font-bold text-white">
-                            Dr. Ratnesh Vishwakarma
-                        </h2>
-                        <p className="text-gray-200 mt-2">
-                            BDS - Oral and Maxillofacial Surgery
-                        </p>
-                        <p className="text-gray-200">
-                            Certified in Advanced Cosmetic Dentistry
-                        </p>
+                        <div className="text-center md:text-left">
+                            <h2 className="text-3xl font-semibold text-white leading-tight">
+                                Dr. Ratnesh Vishwakarma
+                            </h2>
+                            <p className="text-gray-300 mt-2 text-lg">
+                                BDS - Oral and Maxillofacial Surgery
+                            </p>
+                            <p className="text-gray-300 text-lg">
+                                Certified in Advanced Cosmetic Dentistry
+                            </p>
                         </div>
                     </div>
-            
+
                     {/* Biography */}
-                    <div className="mt-6">
-                        <h3 className="text-xl font-semibold text-gray-100">Biography</h3>
-                        <p className="text-gray-200 mt-2 leading-relaxed">
-                        Dr. Pratham Vishwakarma is a highly skilled dentist with over 10
-                        years of experience in delivering exceptional dental care. Known for
-                        his compassionate approach and attention to detail, he specializes
-                        in oral surgery, cosmetic dentistry, and dental implants. Dr.
-                        Pratham stays updated with the latest techniques and technologies to
-                        ensure the best outcomes for his patients.
+                    <div className="mt-8">
+                        <h3 className="text-2xl font-semibold text-white mb-4">Biography</h3>
+                        <p className="text-gray-200 leading-relaxed text-lg">
+                            Dr. Ratnesh Vishwakarma is a highly skilled dentist and cosmetic surgeon with extensive experience in delivering high-quality dental care. With a compassionate approach, he specializes in creating confident smiles and providing personalized treatment plans tailored to each patient’s unique needs.
                         </p>
                     </div>
-            
+
                     {/* Specialties */}
-                    <div className="mt-6">
-                        <h3 className="text-xl font-semibold text-gray-100">Specialties</h3>
-                        <ul className="list-disc list-inside text-gray-200 mt-2">
-                        <li>Dental Implants</li>
-                        <li>Cosmetic Dentistry</li>
-                        <li>Root Canal Treatment</li>
-                        <li>Teeth Whitening</li>
-                        <li>Oral and Maxillofacial Surgery</li>
+                    <div className="mt-8">
+                        <h3 className="text-2xl font-semibold text-white mb-4">Specialties</h3>
+                        <ul className="list-disc list-inside text-gray-200 text-lg">
+                            <li>Dental Implants</li>
+                            <li>Cosmetic Dentistry</li>
+                            <li>Root Canal Treatment</li>
+                            <li>Teeth Whitening</li>
+                            <li>Oral and Maxillofacial Surgery</li>
                         </ul>
                     </div>
-            
+
                     {/* Experience */}
-                    <div className="mt-6">
-                        <h3 className="text-xl font-semibold text-gray-100">Experience</h3>
-                        <p className="text-gray-200 mt-2 leading-relaxed">
-                        With over a decade of experience, Dr. Pratham has successfully
-                        treated thousands of patients, ensuring pain-free and effective
-                        dental care. He has worked in leading dental clinics and hospitals
-                        across the country and is an active participant in dental health
-                        camps and community programs.
+                    <div className="mt-8">
+                        <h3 className="text-2xl font-semibold text-white mb-4">Experience</h3>
+                        <p className="text-gray-200 leading-relaxed text-lg">
+                            Dr. Vishwakarma has been practicing dentistry for over a decade, offering state-of-the-art treatments in top clinics and hospitals. His commitment to staying updated with advancements in dentistry ensures every patient receives the highest standard of care.
                         </p>
                     </div>
-            
+
                     {/* Contact Information */}
-                    <div className="mt-6">
-                        <h3 className="text-xl font-semibold text-gray-100">Contact</h3>
-                        <p className="text-gray-200 mt-2">
-                        Email: example@gmail.com
-                        </p>
-                        <p className="text-gray-200">Phone: +91-9876543210</p>
+                    <div className="mt-8">
+                        <h3 className="text-2xl font-semibold text-white mb-4">Contact</h3>
+                        <p className="text-gray-200 text-lg">Email: smilehouseclinic@gmail.com</p>
+                        <p className="text-gray-200 text-lg">Phone: +91-98923-99293 / +91-90827-95649</p>
                     </div>
                 </div>
             </div>
+            <Footer />
         </>
     );
-  }
-  
+}

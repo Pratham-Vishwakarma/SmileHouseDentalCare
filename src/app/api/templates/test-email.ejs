@@ -5,28 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= templateTitle %></title>
 </head>
-<body style="margin: 0; padding: 0;">
-    <table style="width: 100%;">
-        <tr style="background-color: #0A224050; color: white; height: 70px;">
-            <th>
-                <span style="font-size: 1.6rem;">
+<body style="margin: 0; padding: 0; font-family: Arial, sans-serif; color: #333;">
+    <table style="width: 100%; border-spacing: 0;">
+        <!-- Header Section -->
+        <tr style="background-color: #173c69; color: white; height: 70px;">
+            <th style="text-align: center; padding: 10px;">
+                <span style="font-size: 1.6rem; font-weight: bold;">
                     <%= emailTitle %>
                 </span><br>
-                <small>Email Sender System</small>
+                <small style="font-size: 1rem;">Smile House Dental Care</small>
             </th>
         </tr>
+        <!-- Body Section -->
         <tr>
-            <td>
-                <p>Dear User,</p>
-                <p><%= firstname %> <%= lastname %> has sent you an email.</p>    
-                <p>This email was sent to <%= email %>
-                </p>
+            <td style="padding: 20px;">
+                <p>Dear Smile House Dental Care Team,</p>
+                <p>You have received a new email from:</p>
+                <ul style="list-style-type: none; padding: 0;">
+                    <li><strong>Name:</strong> <%= firstname %> <%= lastname %></li>
+                    <li><strong>Email:</strong> <%= useremail %></li>
+                    <li><strong>Phone Number:</strong> <%= phoneNumber %></li>
+                </ul>
+                <p><strong>Message:</strong> <%= message %></p>
+                <p>If further clarification is needed, please reply to the email or contact the sender at the phone number provided above.</p>
+                <p>Thank you!</p>
             </td>
         </tr>
-        <!--Footer Section-->
-        <tr style="background-color: #0A224050; color: white; height: 70px;">
-            <th>
-                $#169; <%= (new Date()).getFullYear() %> Email Sender System.
+        <!-- Footer Section -->
+        <tr style="background-color: #173c69; color: white; height: 70px;">
+            <th style="text-align: center; padding: 10px;">
+                &copy; <%= new Date().getFullYear() %> Smile House Dental Care. All rights reserved.
             </th>
         </tr>
     </table>

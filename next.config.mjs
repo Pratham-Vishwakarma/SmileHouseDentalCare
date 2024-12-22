@@ -3,7 +3,7 @@ import CopyWebpackPlugin from 'copy-webpack-plugin';
 
 const nextConfig = {
     images: {
-      domains: ['images.unsplash.com', 'tailwindui.com', 'wallpaperaccess.com'], // Add this line to allow images from Unsplash
+      domains: ['images.unsplash.com', 'instagram.fbom65-1.fna.fbcdn.net', 'wallpaperaccess.com', 'github.com'], // Add this line to allow images from Unsplash
     },
     webpack: (config, { isServer }) => {
       if (!isServer) {

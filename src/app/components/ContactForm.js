@@ -3,9 +3,11 @@ import React, { useState, useEffect } from "react";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
-    firstname: "",
-    lastname: "",
-    email: "",
+    name: "",
+    email: "zenither.pc0@gmail.com",
+    useremail: "",
+    phoneNumber: "",
+    message: "",
   });
   const [responseMessage, setResponseMessage] = useState("");
   const [isDisabled, setIsDisabled] = useState(false);
@@ -13,14 +15,14 @@ const ContactForm = () => {
   useEffect(() => {
     let timeout;
     if (responseMessage) {
-      timeout = setTimeout(() => setResponseMessage(""), 3000);
+      timeout = setTimeout(() => setResponseMessage(""), 3000); // Hide after 3 seconds
     }
     return () => clearTimeout(timeout);
   }, [responseMessage]);
 
   const setChange = (event) => {
-    const { name, value } = event.target
-    setFormData(prev => ({
+    const { name, value } = event.target;
+    setFormData((prev) => ({
       ...prev,
       [name]: value,
     }));
@@ -36,72 +38,90 @@ const ContactForm = () => {
         body: JSON.stringify(formData),
       });
       const data = await response.json();
-      setResponseMessage(data?.message);
+      setResponseMessage(data?.message || "Form submitted successfully!");
     } catch (error) {
-      setResponseMessage(error.message);
+      setResponseMessage(error.message || "Something went wrong!");
     } finally {
       setIsDisabled(false);
-      setTimeout(() => setResponseMessage(""), 3000);
     }
   };
 
   return (
     <>
-      <h3>Contact Form</h3>
+      <h3 className="text-xl font-semibold text-white">Get In Touch</h3>
       <form
-        className="rounded-md border-2 p-2 border-slate-200 min-h-90"
+        className="mt-4 space-y-3 w-full max-w-md"
         onSubmit={handleSubmit}
       >
-        <div role="status" className="flex justify-center">
-          <p>{responseMessage}</p>
-        </div>
         <div className="flex flex-col gap-2">
-          <label htmlFor="firstname">First Name</label>
+          <label htmlFor="name" className="text-gray-300 font-medium">
+            Name
+          </label>
           <input
             type="text"
-            name="firstname"
-            value={formData.firstname}
+            name="name"
+            placeholder="Enter Your Name..."
+            value={formData.name}
             onChange={setChange}
             required
-            className="border-2 border-black rounded-md p-2 h-10"
+            className="w-full px-4 py-2 bg-slate-500 text-white rounded-lg"
           />
         </div>
-        <div className="flex flex-col mt-2 gap-2">
-          <label htmlFor="lastname">Last Name</label>
-          <input
-            type="text"
-            name="lastname"
-            value={formData.lastname}
-            onChange={setChange}
-            required
-            className="border-2 border-black rounded-md p-2 h-10"
-          />
-        </div>
-        <div className="flex flex-col mt-2 gap-2">
-          <label htmlFor="email">Email</label>
+        <div className="flex flex-col mt-4 gap-2">
+          <label htmlFor="useremail" className="text-gray-300 font-medium">
+            Your Email
+          </label>
           <input
             type="email"
-            name="email"
-            value={formData.email}
+            name="useremail"
+            placeholder="Enter Your Email..."
+            value={formData.useremail}
             onChange={setChange}
             required
-            className="border-2 border-black rounded-md p-2 h-10"
+            className="w-full px-4 py-2 bg-slate-500 text-white rounded-lg"
+          />
+        </div>
+        <div className="flex flex-col mt-4 gap-2">
+          <label htmlFor="phoneNumber" className="text-gray-300 font-medium">
+            Phone Number
+          </label>
+          <input
+            type="text"
+            name="phoneNumber"
+            placeholder="Enter Your Phone Number..."
+            value={formData.phoneNumber}
+            onChange={setChange}
+            required
+            className="w-full px-4 py-2 bg-slate-500 text-white rounded-lg"
+          />
+        </div>
+        <div className="flex flex-col mt-4 gap-2">
+          <label htmlFor="message" className="text-gray-300 font-medium">
+            Message
+          </label>
+          <textarea
+            name="message"
+            placeholder="Enter Your Message..."
+            value={formData.message}
+            onChange={setChange}
+            required
+            className="w-full px-4 py-3 bg-slate-500 text-white rounded-lg mb-2"
           />
         </div>
 
         {!isDisabled && (
           <input
-            className="bg-cyan-500 text-white w-full rounded-md p-2 mt-4 hover:bg-white hover:text-cyan-500 hover:border-2 hover:border-black"
+            className="bg-blue-500 text-white w-full rounded-xl p-2 hover:bg-gray-300 hover:text-blue-500 hover:border-black hover:font-bold font-bold drop-shadow-2xl"
             type="submit"
             value="Send Email"
             disabled={isDisabled}
           />
         )}
         {isDisabled && (
-          <div role="status" className="flex justify-center mt-5">
+          <div role="status" className="flex justify-center">
             <svg
               aria-hidden="true"
-              className="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+              className="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-500"
               viewBox="0 0 100 101"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -119,6 +139,21 @@ const ContactForm = () => {
           </div>
         )}
       </form>
+
+      {/* Full-Screen Alert */}
+      {responseMessage && (
+        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-60 z-50">
+          <div className="bg-white text-black p-6 rounded-lg shadow-lg text-center w-[90%]">
+            <p>{responseMessage}</p>
+            <button
+              onClick={() => setResponseMessage("")}
+              className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 };
