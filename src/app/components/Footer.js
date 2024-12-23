@@ -1,9 +1,10 @@
 "use client";
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faTwitter, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
+
   return (
     <footer className="bg-gradient-to-b from-gray-800 via-gray-900 to-black text-white py-8">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -56,7 +57,7 @@ const Footer = () => {
                 📍 Plot Number 32, Omkar Society, D/3, Lokhandwala Twp, Kandivali East, Mumbai, Maharashtra, 400101
               </li>
               <li className="text-gray-400">📞 (+91) 9892-399-293 / (+91) 9082-795-649</li>
-              <li className="text-gray-400">📧 info@dentalclinic.com</li>
+              <li className="text-gray-400">📧 zenither.pc0@gmail.com</li>
             </ul>
           </div>
 

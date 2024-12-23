@@ -4,10 +4,10 @@ export async function POST(req) {
     try {
         const body = await req.json();
         console.log("Received body:", body);
-        const { name, email, useremail, phoneNumber, message } = body;
+        const { name, useremail, phoneNumber, message } = body;
 
         const emailResponse = await sendMail(
-            email, 
+            process.env.TO_EMAIL_ADDRESS, 
             `Email From Smile House Dental Care Website`, 
             'test-email',
             {
@@ -16,7 +16,6 @@ export async function POST(req) {
                 name,
                 useremail,
                 phoneNumber,
-                email,
                 message,
             }
         )

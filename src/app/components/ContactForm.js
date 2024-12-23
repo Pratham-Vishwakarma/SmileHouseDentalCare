@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
-    email: "zenither.pc0@gmail.com",
     useremail: "",
     phoneNumber: "",
     message: "",
@@ -33,7 +32,7 @@ const ContactForm = () => {
     console.log("FormData:", formData);
     try {
       setIsDisabled(true);
-      const response = await fetch("../api/email", {
+      const response = await fetch("../api/contact", {
         method: "POST",
         body: JSON.stringify(formData),
       });
@@ -43,6 +42,7 @@ const ContactForm = () => {
       setResponseMessage(error.message || "Something went wrong!");
     } finally {
       setIsDisabled(false);
+      window.location.reload();
     }
   };
 
