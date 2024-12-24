@@ -13,12 +13,12 @@ Choose Smile House Dental Care for quality care, comfort, and a smile that lasts
 ## Table of Contents
 
 - [Smile House Dental Care](#smile-house-dental-care)
-  - [Table of Contents](#table-of-contents)
-  - [Getting Started](#getting-started)
-  - [Features](#features)
-  - [Environment Variables](#environment-variables)
-  - [Scripts](#scripts)
-  - [License](#license)
+- [Table of Contents](#table-of-contents)
+- [Getting Started](#getting-started)
+- [Features](#features)
+- [Environment Variables](#environment-variables)
+- [Scripts](#scripts)
+- [License](#license)
 
 ## Getting Started
 
