@@ -3,12 +3,12 @@ import ejs from 'ejs';
 import path from 'path';
 
 const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
+    host: process.env.EMAIL_HOST,
+    port: process.env.EMAIL_PORT,
     secure: false, // true for port 465, false for other ports
     auth: {
-      user: "pratham.vishwakarma125940@gmail.com", // generated ethereal user
-      pass: "iiwk prsw ykey rolt", // generated ethereal password
+        user: process.env.FROM_EMAIL_ADDRESS, // generated ethereal user
+        pass: process.env.EMAIL_PASSWORD, // generated ethereal password
     },
 });
 
@@ -30,7 +30,7 @@ const sendMail = async (to, subject, templateName, templateData) => {
         const html = await renderTemplate(templateName, templateData);
 
         const mailOptions = {
-            from: `"Smile House Dental Care" "pratham.vishwakarma125940@gmail.com"`,
+            from: `${process.env.FROM_EMAIL_USERNAME} ${process.env.FROM_EMAIL_ADDRESS}`,
             to,
             subject,
             html
