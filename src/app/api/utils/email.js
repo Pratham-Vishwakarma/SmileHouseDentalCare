@@ -14,8 +14,8 @@ const transporter = nodemailer.createTransport({
 
 //Render The EJS Template
 const renderTemplate = async (templateName, data) => {
-    const templatePath = path.join(process.cwd(), '.next', 'templates')
-    const template = path.join(templatePath, `${templateName}.ejs`)
+    const templatePath = path.join(process.cwd(), 'src', 'app', 'api', 'templates');
+    const template = path.join(templatePath, `${templateName}.ejs`);    
 
     return new Promise((resolve, reject) => {
         ejs.renderFile(template, data, (err, html) => {
