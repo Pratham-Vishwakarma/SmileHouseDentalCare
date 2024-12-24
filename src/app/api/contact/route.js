@@ -9,7 +9,7 @@ export async function POST(req) {
         console.log('TO_EMAIL_ADDRESS:', process.env.TO_EMAIL_ADDRESS);
 
         const emailResponse = await sendMail(
-            " 
+            "smile.drratnesh@gmail.com",
             `Email From Smile House Dental Care Website`, 
             'test-email',
             {
