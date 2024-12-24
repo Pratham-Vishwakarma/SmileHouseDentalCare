@@ -141,12 +141,12 @@ export default function BookAppointment() {
             <Navbar />
             <div className="flex justify-center items-center bg-gradient-to-b from-stone-700 via-slate-700 to-zinc-700">
                 <form
-                    className="bg-gradient-to-br from-zinc-600 via-slate-600 to-stone-600 p-6 rounded-2xl shadow-lg w-[70%] mt-24 mb-20"
+                    className="bg-gradient-to-br from-zinc-600 via-slate-600 to-stone-600 p-6 rounded-2xl shadow-lg max-w-[700px] w-[70%] mt-24 mb-20"
                     onSubmit={handleSubmit}
                 >
-                    <h2 className="text-2xl font-bold mb-4 text-center text-gray-200">Book an Appointment</h2>
+                    <h2 className="text-2xl font-bold mb-4 text-center text-gray-100">Book an Appointment</h2>
 
-                    <label className="block mb-2 font-semibold text-gray-300" htmlFor="name">Full Name</label>
+                    <label className="block mb-2 font-semibold text-gray-300 text-center" htmlFor="name">Full Name</label>
                     <input
                         className="w-full p-2 mb-4 border-2 border-slate-700 shadow-lg rounded-lg bg-slate-600 text-gray-300"
                         type="text"
@@ -158,7 +158,7 @@ export default function BookAppointment() {
                         required
                     />
 
-                    <label className="block mb-2 font-semibold text-gray-300" htmlFor="number">Phone Number</label>
+                    <label className="block mb-2 font-semibold text-gray-300 text-center" htmlFor="number">Phone Number</label>
                     <input
                         className="w-full p-2 mb-4 border-2 border-slate-700 shadow-lg rounded-lg bg-slate-600 text-gray-300"
                         type="text"
@@ -170,7 +170,7 @@ export default function BookAppointment() {
                         required
                     />
 
-                    <label className="block mb-2 font-semibold text-gray-300" htmlFor="useremail">Email</label>
+                    <label className="block mb-2 font-semibold text-gray-300 text-center" htmlFor="useremail">Email</label>
                     <input
                         className="w-full p-2 mb-4 border-2 border-slate-700 shadow-lg rounded-lg bg-slate-600 text-gray-300"
                         type="email"
@@ -182,7 +182,7 @@ export default function BookAppointment() {
                         required
                     />
 
-                    <label className="block mb-2 font-semibold text-gray-300" htmlFor="date">Date</label>
+                    <label className="block mb-2 font-semibold text-gray-300 text-center" htmlFor="date">Date</label>
                     <input
                         className="w-full p-2 mb-4 border-2 border-slate-700 shadow-lg rounded-lg bg-slate-600 text-gray-300"
                         type="date"
@@ -193,7 +193,7 @@ export default function BookAppointment() {
                         required
                     />
 
-                    <label className="block mb-2 font-semibold text-gray-300" htmlFor="time">Time</label>
+                    <label className="block mb-2 font-semibold text-gray-300 text-center" htmlFor="time">Time</label>
                     <select
                         className="w-full p-2 mb-4 border-2 border-slate-700 shadow-lg rounded-lg bg-slate-600 text-gray-300"
                         id="time"
@@ -215,7 +215,7 @@ export default function BookAppointment() {
                     )}
                     </select>
 
-                    <label className="block mb-2 font-semibold text-gray-300" htmlFor="service">Service</label>
+                    <label className="block mb-2 font-semibold text-gray-300 text-center" htmlFor="service">Service</label>
                     <select
                         className="w-full p-2 mb-4 border-2 border-slate-700 shadow-lg rounded-lg bg-slate-600 text-gray-300 focus:bg-slate-700"
                         id="service"
@@ -235,7 +235,7 @@ export default function BookAppointment() {
                         <option value="other">Others</option>
                     </select>
 
-                    <label className="block mb-2 font-semibold text-gray-300" htmlFor="notes">Additional Notes</label>
+                    <label className="block mb-2 font-semibold text-gray-300 text-center" htmlFor="notes">Additional Notes</label>
                     <textarea
                         className="w-full p-2 mb-4 border-2 border-slate-700 shadow-lg rounded-lg bg-slate-600 text-gray-300"
                         id="notes"

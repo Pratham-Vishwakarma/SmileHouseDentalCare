@@ -57,7 +57,7 @@ const Footer = () => {
                 📍 Plot Number 32, Omkar Society, D/3, Lokhandwala Twp, Kandivali East, Mumbai, Maharashtra, 400101
               </li>
               <li className="text-gray-400">📞 (+91) 9892-399-293 / (+91) 9082-795-649</li>
-              <li className="text-gray-400">📧 zenither.pc0@gmail.com</li>
+              <li className="text-gray-400">📧 smile.drratnesh@gmail.com</li>
             </ul>
           </div>
 
@@ -66,20 +66,12 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
             <div className="flex space-x-4 justify-center sm:justify-start">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/profile.php?id=100093239145009&mibextid=ZbWKwL"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-blue-500"
               >
                 <FontAwesomeIcon icon={faFacebook} size="2x" />
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-blue-400"
-              >
-                <FontAwesomeIcon icon={faTwitter} size="2x" />
               </a>
               <a
                 href="https://instagram.com/smilehousedentalcare"
@@ -88,14 +80,6 @@ const Footer = () => {
                 className="text-gray-400 hover:text-pink-500"
               >
                 <FontAwesomeIcon icon={faInstagram} size="2x" />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-blue-600"
-              >
-                <FontAwesomeIcon icon={faLinkedin} size="2x" />
               </a>
             </div>
           </div>

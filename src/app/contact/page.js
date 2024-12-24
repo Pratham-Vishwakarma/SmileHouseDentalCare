@@ -36,6 +36,11 @@ const page = () => {
                   className="rounded-lg object-cover"
                 />
               </div>
+              <h3 className="text-xl font-semibold text-white mt-6">Our Contacts</h3>
+              <p className="mt-2 text-gray-400">              
+              📞 (+91) 9892-399-293 / (+91) 9082-795-649<br></br>
+              📧 smile.drratnesh@gmail.com              
+              </p>
             </div>
 
             {/* Contact Form */}

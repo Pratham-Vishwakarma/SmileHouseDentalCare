@@ -66,7 +66,7 @@ export default function AboutYourDoctor() {
                     {/* Contact Information */}
                     <div className="mt-8">
                         <h3 className="text-2xl font-semibold text-white mb-4">Contact</h3>
-                        <p className="text-gray-200 text-lg">Email: smilehouseclinic@gmail.com</p>
+                        <p className="text-gray-200 text-lg">Email: smile.drratnesh@gmail.com</p>
                         <p className="text-gray-200 text-lg">Phone: +91-98923-99293 / +91-90827-95649</p>
                     </div>
                 </div>
