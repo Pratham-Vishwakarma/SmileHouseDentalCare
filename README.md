@@ -1,8 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Smile House Dental Care
+
+![Smile House Dental Care Logo](./public/smilehouse-logo.png)
+
+This is a [Next.js](https://nextjs.org) project for Smile House Dental Care, providing comprehensive dental solutions to help you achieve a perfect smile in a comfortable and compassionate environment.
+
+Smile House Dental Care is dedicated to providing exceptional dental services in a comfortable and compassionate environment. Led by Dr. Ratnesh Vishwakarma, our clinic focuses on helping you achieve a healthy, beautiful smile with personalized care.
+
+We offer a range of services, from routine check-ups to advanced treatments, using the latest technology to ensure the best results. Our friendly and professional team is committed to making every visit a positive experience.
+
+Choose Smile House Dental Care for quality care, comfort, and a smile that lasts.
+
+## Table of Contents
+
+- [Smile House Dental Care](#smile-house-dental-care)
+  - [Table of Contents](#table-of-contents)
+  - [Getting Started](#getting-started)
+  - [Features](#features)
+  - [Environment Variables](#environment-variables)
+  - [Scripts](#scripts)
+  - [License](#license)
 
 ## Getting Started
 
-First, run the development server:
+First, clone the repository:
+
+```bash
+git clone https://github.com/yourusername/smilehousedentalcare.git
+cd smilehousedentalcare
+```
+
+Install the dependecies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
@@ -10,27 +47,41 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Home Page:** Welcome message and introduction to Smile House Dental Care.
+- **About Page:** Information about the clinic and Dr. Ratnesh Vishwakarma.
+- **Services Page:** Detailed list of dental services offered.
+- **Contact Page:** Contact form and clinic location.
+- **Appointment Booking:** Book an appointment online.
+- **Testimonials:** Patient testimonials.
+- **FAQ:** Frequently asked questions.
 
-## Learn More
+## Environment Variables
 
-To learn more about Next.js, take a look at the following resources:
+Create a .env file in the root directory and add the following environment variables:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+EMAIL_HOST=smtp.example.com
+EMAIL_PORT=587
+FROM_EMAIL_ADDRESS=your-email@example.com
+EMAIL_PASSWORD=your-email-password
+FROM_EMAIL_USERNAME=Your Name
+TO_EMAIL_ADDRESS=recipient-email@example.com
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Scripts
 
-## Deploy on Vercel
+- dev: Runs the development server.
+- build: Builds the application for production.
+- start: Starts the production server.
+- lint: Runs ESLint to check for linting errors.
+- postbuild: Generates the sitemap after building the application.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License.
