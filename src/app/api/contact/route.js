@@ -7,7 +7,7 @@ export async function POST(req) {
         const { name, useremail, phoneNumber, message } = body;
 
         const emailResponse = await sendMail(
-            process.env.TO_EMAIL_ADDRESS, 
+            " 
             `Email From Smile House Dental Care Website`, 
             'test-email',
             {
