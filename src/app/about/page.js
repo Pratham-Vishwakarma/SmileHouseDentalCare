@@ -22,11 +22,15 @@ const AboutClinic = () => {
           <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="flex flex-col items-center text-center">
               <Image
-                src="/default-image.jpeg"
+                src="/drratnesh3.png"
                 alt="SmileHouse Dental Care"
-                width={3000}
-                height={280}
+                width={425}
+                height={200}
                 className="rounded-lg shadow-lg"
+                // style={{
+                //   width: '450px',
+                //   height: '325px',
+                // }}
               />
             </div>
             <div className="flex flex-col justify-center">
@@ -46,13 +50,15 @@ const AboutClinic = () => {
               </p>
             </div>
             <div className="flex flex-col items-center text-center">
-              <Image
-                src="/default-image.jpeg"
-                alt="Clinic Interior"
-                width={500}
-                height={300}
-                className="rounded-lg object-cover shadow-lg"
-              />
+                  <div className="shadow-xl">
+                    <Image
+                        src="/clinic1 1.png"
+                        alt="Doctor's Profile"
+                        width={2500}
+                        height={300}
+                        className="rounded-xl object-cover"
+                    />
+                </div>
             </div>
           </div>
 
@@ -65,13 +71,15 @@ const AboutClinic = () => {
 
             <div className="mt-8 flex justify-center items-center space-x-8">
               <div className="flex flex-col items-center">
-                <Image
-                  src="https://images.unsplash.com/photo-1734335225921-06e1b6d94ed0?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="Dr. Ratnesh Vishwakarma"
-                  width={150}
-                  height={150}
-                  className="w-32 h-32 rounded-full object-cover shadow-xl"
-                />
+                <div className="w-32 h-32 rounded-full overflow-hidden shadow-xl">
+                    <Image
+                        src="/drratnesh-2.jpg"
+                        alt="Doctor's Profile"
+                        width={300}
+                        height={300}
+                        className="rounded-full object-cover"
+                    />
+                </div>
                 <h4 className="mt-4 text-xl font-semibold text-white">Dr. Ratnesh Vishwakarma</h4>
                 <p className="mt-1 text-gray-400">Dental & Cosmetic Surgeon</p>
               </div>

@@ -41,35 +41,47 @@ export default function Home() {
       {/* Before and After Gallery */}
       <div className="bg-gradient-to-tl from-zinc-700 from-10% via-slate-700 via-60% to-stone-700 to-90% py-6">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-extrabold sm:text-4xl">
+          <h2 className="text-3xl font-extrabold sm:text-4xl mb-8">
             Before & After Gallery
           </h2>
+          <span
+            className="text-4xl bg-slate-700 p-2 px-4 rounded-lg text-gray-400 font-bold shadow-lg"
+          >
+            Smile Makeover
+          </span>
           <div className="mt-10 flex justify-center gap-8">
             {/* Before Image */}
             <div className="flex flex-col items-center">
               <Image
-                src="https://images.unsplash.com/photo-1734335225921-06e1b6d94ed0?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="/bad-smile.png"
                 alt="Before and After"
                 width={300}
                 height={200}
-                className="w-full h-auto rounded-lg shadow-lg"
+                className="h-auto rounded-lg shadow-lg"
+                style={{
+                  width: '300px',
+                  height: '400px',
+                }}
               />
-              <p className="mt-4 text-lg font-semibold">Before</p>
+              <p className="mt-4 text-2xl font-semibold">Before</p>
             </div>
 
             {/* After Image */}
             <div className="flex flex-col items-center">
               <Image
-                src="https://images.unsplash.com/photo-1734335225921-06e1b6d94ed0?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="/good-smile.png"
                 alt="Before and After"
                 width={300}
                 height={200}
-                className="w-full h-auto rounded-lg shadow-lg"
+                className="rounded-lg shadow-lg"
+                style={{
+                  width: '300px',
+                  height: '400px',
+                }}
               />
-              <p className="mt-4 text-lg font-semibold">After</p>
+              <p className="mt-4 text-2xl font-semibold">After</p>
             </div>
           </div>
-          <p className="mt-1 text-gray-400">Smile Makeover</p>
         </div>
       </div>
 

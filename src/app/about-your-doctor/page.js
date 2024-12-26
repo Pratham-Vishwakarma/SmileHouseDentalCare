@@ -13,11 +13,11 @@ export default function AboutYourDoctor() {
                         {/* Doctor's Image */}
                         <div className="w-32 h-32 rounded-full overflow-hidden shadow-xl">
                             <Image
-                                src="/default-image.jpeg"
+                                src="/drratnesh-2.jpg"
                                 alt="Doctor's Profile"
-                                width={150}
-                                height={150}
-                                className="w-32 h-32 rounded-full object-cover"
+                                width={300}
+                                height={300}
+                                className="rounded-full object-cover"
                             />
                         </div>
 
